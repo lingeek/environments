@@ -1,0 +1,3 @@
+---
+puppet::status: 'running'
+puppet::enabled: true

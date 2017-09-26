@@ -1,0 +1,4 @@
+---
+
+puppet::status: 'stopped'
+puppet::enabled: false
