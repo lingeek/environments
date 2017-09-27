@@ -2,3 +2,7 @@
 
 puppet::status: 'stopped'
 puppet::enabled: false
+c10::haproxy: haproxy
+c10::haproxy::status: 'latest'
+c10::haproxy::decomission: 'purged'
+

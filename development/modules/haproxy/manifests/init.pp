@@ -42,7 +42,22 @@
 #
 # Copyright 2017 Your name here, unless otherwise noted.
 #
-class haproxy {
+class haproxy (
+$haproxy_package = lookup({ name => 'c10::haproxy' }),
+$haproxy_status = lookup({name => 'c10::haproxy::status'})
+)
+{
+
+package { $haproxy_package:
+ensure => $haproxy_status,
+noop => false,
+}
+
+notify { $haproxy_package:
+message => "HAproxy reverse web proxy",
+
+}
+
 
 
 }
